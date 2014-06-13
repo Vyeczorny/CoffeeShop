@@ -1,6 +1,6 @@
 ﻿namespace CoffeeShop
 {
-    partial class Form1
+    partial class LoginWindow
     {
         /// <summary>
         /// Required designer variable.
