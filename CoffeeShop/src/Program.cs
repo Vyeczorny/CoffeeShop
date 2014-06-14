@@ -11,12 +11,16 @@ namespace CoffeeShop
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        //[STAThread]
         static void Main()
         {
+            PostgreSQL.connect("shop", "localhost", "postgres", "qwe");
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginWindow());
+            Application.Run(new AdminWindow());
+
+            PostgreSQL.close();
         }
     }
 }
