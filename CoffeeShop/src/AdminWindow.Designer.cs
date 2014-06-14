@@ -175,6 +175,7 @@
             this.updateProductButton.TabIndex = 3;
             this.updateProductButton.Text = "Zmień produkt";
             this.updateProductButton.UseVisualStyleBackColor = true;
+            this.updateProductButton.Click += new System.EventHandler(this.updateProductButton_Click);
             // 
             // AdminWindow
             // 
