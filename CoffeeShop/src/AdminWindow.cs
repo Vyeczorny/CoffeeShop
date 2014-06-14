@@ -54,5 +54,21 @@ namespace CoffeeShop
                 updateListView();
             }
         }
+
+        private void addProductButton_Click(object sender, EventArgs e)
+        {
+            AddProductForm window = new AddProductForm();
+            window.ShowDialog();
+            updateListView();
+        }
+
+        private void removeProductButton_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                PostgreSQL.executeCommand("DELETE FROM produkt WHERE kod_prod=" + listView1.SelectedItems[0].Text);
+                updateListView();
+            }
+        }
     }
 }

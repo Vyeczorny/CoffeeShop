@@ -16,7 +16,6 @@ namespace CoffeeShop
         {
             item = i;
 
-            InitializeComponent();
             nameBox.Text = item.SubItems[3].Text;
             describeBox.Text = item.SubItems[2].Text;
             priceBox.Text = item.SubItems[1].Text;

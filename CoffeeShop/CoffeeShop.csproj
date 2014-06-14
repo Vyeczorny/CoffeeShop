@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\AdminWindow.cs">
       <SubType>Form</SubType>
     </Compile>

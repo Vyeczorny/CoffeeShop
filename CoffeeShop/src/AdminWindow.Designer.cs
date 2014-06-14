@@ -145,6 +145,7 @@
             this.removeProductButton.TabIndex = 1;
             this.removeProductButton.Text = "Usuń produkt";
             this.removeProductButton.UseVisualStyleBackColor = true;
+            this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
             // 
             // orderProductButton
             // 
@@ -165,6 +166,7 @@
             this.addProductButton.TabIndex = 0;
             this.addProductButton.Text = "Dodaj produkt";
             this.addProductButton.UseVisualStyleBackColor = true;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
             // updateProductButton
             // 
