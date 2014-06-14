@@ -1,6 +1,6 @@
 ﻿namespace CoffeeShop
 {
-    partial class UpdateProductWindow
+    partial class ProductForm
     {
         /// <summary>
         /// Required designer variable.
@@ -162,15 +162,15 @@
             this.updateProductButton.TabIndex = 8;
             this.updateProductButton.Text = "OK";
             this.updateProductButton.UseVisualStyleBackColor = true;
-            this.updateProductButton.Click += new System.EventHandler(this.updateProductButton_Click);
+            this.updateProductButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.updateProductButton_MouseClick);
             // 
-            // UpdateProductWindow
+            // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 134);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UpdateProductWindow";
+            this.Name = "ProductForm";
             this.Text = "UpdateProductWindow";
             this.TopMost = true;
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -182,14 +182,14 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox countBox;
-        private System.Windows.Forms.TextBox priceBox;
-        private System.Windows.Forms.TextBox describeBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.Button updateProductButton;
+        protected System.Windows.Forms.TextBox countBox;
+        protected System.Windows.Forms.TextBox priceBox;
+        protected System.Windows.Forms.TextBox describeBox;
+        protected System.Windows.Forms.TextBox nameBox;
+        protected System.Windows.Forms.Button updateProductButton;
     }
 }

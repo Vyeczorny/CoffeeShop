@@ -39,7 +39,7 @@ namespace CoffeeShop
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem selectedItem = listView1.SelectedItems[0];
-            UpdateProductWindow window = new UpdateProductWindow(selectedItem);
+            UpdateProductForm window = new UpdateProductForm(selectedItem);
             window.ShowDialog();
             updateListView();
         }
@@ -49,7 +49,7 @@ namespace CoffeeShop
             if(listView1.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = listView1.SelectedItems[0];
-                UpdateProductWindow window = new UpdateProductWindow(selectedItem);
+                UpdateProductForm window = new UpdateProductForm(selectedItem);
                 window.ShowDialog();
                 updateListView();
             }

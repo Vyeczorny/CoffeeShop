@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CoffeeShop
 {
-    public partial class UpdateProductWindow : Form
+    public partial class UpdateProductForm : ProductForm
     {
-        public UpdateProductWindow(ListViewItem i)
+        public UpdateProductForm(ListViewItem i)
         {
             item = i;
 
@@ -24,9 +23,7 @@ namespace CoffeeShop
             countBox.Text = item.SubItems[4].Text;
         }
 
-        private ListViewItem item;
-
-        private void updateProductButton_Click(object sender, EventArgs e)
+        public override void updateProductButton_MouseClick(object sender, MouseEventArgs e)
         {
             try
             {
@@ -38,15 +35,9 @@ namespace CoffeeShop
                     + "ilosc=" + int.Parse(countBox.Text) + " "
                     + "WHERE kod_prod=" + item.SubItems[0].Text
                     );
-
-                //item.SubItems[1].Text = priceBox.Text;
-                //item.SubItems[2].Text = describeBox.Text;
-                //item.SubItems[3].Text = nameBox.Text;
-                //item.SubItems[4].Text = countBox.Text;
-
                 this.Close();
             }
-            catch (FormatException ex) 
+            catch (FormatException ex)
             {
                 MessageBox.Show(ex.Message + "\n");
             }
