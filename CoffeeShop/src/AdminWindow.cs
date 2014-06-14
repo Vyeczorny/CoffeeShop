@@ -20,10 +20,11 @@ namespace CoffeeShop
 
         private void AdminWindow_Load(object sender, EventArgs e)
         {
-            updateListView();
+            updateListView1();
+            updateListView2();
         }
 
-        private void updateListView()
+        private void updateListView1()
         {
             listView1.Items.Clear();
             NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT * FROM produkt");
@@ -36,12 +37,26 @@ namespace CoffeeShop
             }
         }
 
+        private void updateListView2()
+        {
+            listView2.Items.Clear();
+
+            NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT * FROM dostawca");
+
+            while (reader.Read())
+            {
+                ListViewItem item = listView2.Items.Add(reader[0].ToString());
+                for (int i = 1; i < reader.FieldCount; ++i)
+                    item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
+            }
+        }
+
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem selectedItem = listView1.SelectedItems[0];
             UpdateProductForm window = new UpdateProductForm(selectedItem);
             window.ShowDialog();
-            updateListView();
+            updateListView1();
         }
 
         private void updateProductButton_Click(object sender, EventArgs e)
@@ -51,7 +66,7 @@ namespace CoffeeShop
                 ListViewItem selectedItem = listView1.SelectedItems[0];
                 UpdateProductForm window = new UpdateProductForm(selectedItem);
                 window.ShowDialog();
-                updateListView();
+                updateListView1();
             }
         }
 
@@ -59,7 +74,7 @@ namespace CoffeeShop
         {
             AddProductForm window = new AddProductForm();
             window.ShowDialog();
-            updateListView();
+            updateListView1();
         }
 
         private void removeProductButton_Click(object sender, EventArgs e)
@@ -67,7 +82,7 @@ namespace CoffeeShop
             if(listView1.SelectedItems.Count > 0)
             {
                 PostgreSQL.executeCommand("DELETE FROM produkt WHERE kod_prod=" + listView1.SelectedItems[0].Text);
-                updateListView();
+                updateListView1();
             }
         }
     }
