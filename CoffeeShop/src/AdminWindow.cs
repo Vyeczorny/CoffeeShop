@@ -85,5 +85,15 @@ namespace CoffeeShop
                 updateListView1();
             }
         }
+
+        private void updateSupplierButton_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count > 0)
+            {
+                SupplierDetails window = new SupplierDetails(listView2.SelectedItems[0]);
+                window.ShowDialog();
+            }
+            
+        }
     }
 }
