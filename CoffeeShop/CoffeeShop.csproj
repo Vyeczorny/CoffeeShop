@@ -83,11 +83,17 @@
     <Compile Include="src\UpdateProductForm.Designer.cs">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupplierDetails.cs">
+    <Compile Include="src\SupplierDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupplierDetails.Designer.cs">
+    <Compile Include="src\SupplierDetails.Designer.cs">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\SupplierProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\SupplierProductForm.Designer.cs">
+      <DependentUpon>SupplierProductForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="src\AdminWindow.resx">
       <DependentUpon>AdminWindow.cs</DependentUpon>
@@ -107,8 +113,11 @@
     <EmbeddedResource Include="src\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupplierDetails.resx">
+    <EmbeddedResource Include="src\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\SupplierProductForm.resx">
+      <DependentUpon>SupplierProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
