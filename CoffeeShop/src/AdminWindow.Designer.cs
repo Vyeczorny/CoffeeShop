@@ -42,15 +42,15 @@
             this.addProductButton = new System.Windows.Forms.Button();
             this.updateProductButton = new System.Windows.Forms.Button();
             this.SuppliesPage = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.addSupplierButton = new System.Windows.Forms.Button();
-            this.removeSupplierButton = new System.Windows.Forms.Button();
-            this.updateSupplierButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.updateSupplierButton = new System.Windows.Forms.Button();
+            this.removeSupplierButton = new System.Windows.Forms.Button();
+            this.addSupplierButton = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.productsPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -204,66 +204,6 @@
             this.SuppliesPage.Text = "Dostawcy";
             this.SuppliesPage.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.updateSupplierButton, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.removeSupplierButton, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.addSupplierButton, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 498);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 28);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // addSupplierButton
-            // 
-            this.addSupplierButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addSupplierButton.Location = new System.Drawing.Point(3, 3);
-            this.addSupplierButton.Name = "addSupplierButton";
-            this.addSupplierButton.Size = new System.Drawing.Size(198, 22);
-            this.addSupplierButton.TabIndex = 0;
-            this.addSupplierButton.Text = "Dodaj dostawcę";
-            this.addSupplierButton.UseVisualStyleBackColor = true;
-            // 
-            // removeSupplierButton
-            // 
-            this.removeSupplierButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.removeSupplierButton.Location = new System.Drawing.Point(207, 3);
-            this.removeSupplierButton.Name = "removeSupplierButton";
-            this.removeSupplierButton.Size = new System.Drawing.Size(198, 22);
-            this.removeSupplierButton.TabIndex = 1;
-            this.removeSupplierButton.Text = "Usuń dostawcę";
-            this.removeSupplierButton.UseVisualStyleBackColor = true;
-            // 
-            // updateSupplierButton
-            // 
-            this.updateSupplierButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateSupplierButton.Location = new System.Drawing.Point(411, 3);
-            this.updateSupplierButton.Name = "updateSupplierButton";
-            this.updateSupplierButton.Size = new System.Drawing.Size(198, 22);
-            this.updateSupplierButton.TabIndex = 2;
-            this.updateSupplierButton.Text = "Pokaż szczegóły";
-            this.updateSupplierButton.UseVisualStyleBackColor = true;
-            this.updateSupplierButton.Click += new System.EventHandler(this.updateSupplierButton_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(615, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 22);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Dodaj dostawcę";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -295,6 +235,67 @@
             // 
             this.columnHeader3.Text = "Numer konta";
             this.columnHeader3.Width = 247;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.updateSupplierButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.removeSupplierButton, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.addSupplierButton, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 498);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 28);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(615, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(198, 22);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Dodaj dostawcę";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // updateSupplierButton
+            // 
+            this.updateSupplierButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateSupplierButton.Location = new System.Drawing.Point(411, 3);
+            this.updateSupplierButton.Name = "updateSupplierButton";
+            this.updateSupplierButton.Size = new System.Drawing.Size(198, 22);
+            this.updateSupplierButton.TabIndex = 2;
+            this.updateSupplierButton.Text = "Pokaż szczegóły";
+            this.updateSupplierButton.UseVisualStyleBackColor = true;
+            this.updateSupplierButton.Click += new System.EventHandler(this.updateSupplierButton_Click);
+            // 
+            // removeSupplierButton
+            // 
+            this.removeSupplierButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.removeSupplierButton.Location = new System.Drawing.Point(207, 3);
+            this.removeSupplierButton.Name = "removeSupplierButton";
+            this.removeSupplierButton.Size = new System.Drawing.Size(198, 22);
+            this.removeSupplierButton.TabIndex = 1;
+            this.removeSupplierButton.Text = "Usuń dostawcę";
+            this.removeSupplierButton.UseVisualStyleBackColor = true;
+            // 
+            // addSupplierButton
+            // 
+            this.addSupplierButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addSupplierButton.Location = new System.Drawing.Point(3, 3);
+            this.addSupplierButton.Name = "addSupplierButton";
+            this.addSupplierButton.Size = new System.Drawing.Size(198, 22);
+            this.addSupplierButton.TabIndex = 0;
+            this.addSupplierButton.Text = "Dodaj dostawcę";
+            this.addSupplierButton.UseVisualStyleBackColor = true;
+            this.addSupplierButton.Click += new System.EventHandler(this.addSupplierButton_Click);
             // 
             // AdminWindow
             // 

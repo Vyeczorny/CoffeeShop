@@ -19,14 +19,11 @@ namespace CoffeeShop
             supplierId = id;
             InitializeComponent();
 
-            NpgsqlDataReader reader = PostgreSQL.executeCommand("(SELECT kod_prod, nazwa FROM produkt) EXCEPT (SELECT kod_prod, nazwa FROM dostawca_dostarcza_produkt NATURAL JOIN produkt)");
+            NpgsqlDataReader reader = PostgreSQL.executeCommand("(SELECT kod_prod, nazwa FROM produkt) "
+                +"EXCEPT (SELECT kod_prod, nazwa FROM dostawca_dostarcza_produkt NATURAL JOIN produkt WHERE kod_dost=" + id + ")");
             while (reader.Read())
                 productComboBox.Items.Add(reader[0] + ". " + reader[1]);
-            if(productComboBox.Items.Count == 0)
-            {
-                
-            }
-            else
+            if(productComboBox.Items.Count > 0)
                 productComboBox.SelectedIndex=0;
         }
 

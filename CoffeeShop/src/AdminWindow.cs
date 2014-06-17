@@ -92,7 +92,13 @@ namespace CoffeeShop
             {
                 SupplierDetails window = new SupplierDetails(listView2.SelectedItems[0]);
                 window.ShowDialog();
+                updateListView2();
             }
+            
+        }
+
+        private void addSupplierButton_Click(object sender, EventArgs e)
+        {
             
         }
     }

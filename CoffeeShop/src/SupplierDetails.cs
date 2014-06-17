@@ -22,8 +22,8 @@ namespace CoffeeShop
 
             updateListView();
         }
-
-        public void updateListView()
+        
+        private void updateListView()
         {
             listView1.Items.Clear();
             NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT p.kod_prod, p.nazwa, d.max_ilosc, d.cena_hurt FROM produkt p join dostawca_dostarcza_produkt d using(kod_prod) WHERE kod_dost=" + supplierIdTextBox.Text);
@@ -48,6 +48,13 @@ namespace CoffeeShop
 
         private void saveChangesButton_Click(object sender, EventArgs e)
         {
+            PostgreSQL.executeCommand("UPDATE dostawca SET "
+                + "nazwa='" + supplierNameTextBox.Text + "',"
+                + "nr_konta=" + supplierAccountTextBox.Text
+                + "WHERE kod_dost=" + supplierIdTextBox.Text
+                );
+
+            this.Close();
         }
 
         private void removeProductButton_Click(object sender, EventArgs e)

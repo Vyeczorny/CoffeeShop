@@ -128,6 +128,7 @@
             // supplierIdTextBox
             // 
             this.supplierIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.supplierIdTextBox.Enabled = false;
             this.supplierIdTextBox.Location = new System.Drawing.Point(255, 3);
             this.supplierIdTextBox.Name = "supplierIdTextBox";
             this.supplierIdTextBox.Size = new System.Drawing.Size(247, 20);
@@ -251,14 +252,10 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox supplierAccountTextBox;
-        private System.Windows.Forms.TextBox supplierNameTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox supplierIdTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -267,5 +264,9 @@
         private System.Windows.Forms.Button saveChangesButton;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button removeProductButton;
+        protected System.Windows.Forms.TextBox supplierAccountTextBox;
+        protected System.Windows.Forms.TextBox supplierNameTextBox;
+        protected System.Windows.Forms.TextBox supplierIdTextBox;
+        protected System.Windows.Forms.ListView listView1;
     }
 }
