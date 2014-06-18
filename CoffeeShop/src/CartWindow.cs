@@ -32,7 +32,6 @@ namespace CoffeeShop
                     item.SubItems.Add(product.Value.ToString());
                     item.SubItems.Add(reader[2].ToString());
 
-                    _totalPrice += (product.Value * float.Parse(reader[2].ToString()));
                     updateTotalPrice();
                 }
             }
@@ -40,6 +39,11 @@ namespace CoffeeShop
 
         private void updateTotalPrice()
         {
+            _totalPrice = 0;
+            foreach(ListViewItem item in listView1.Items)
+            {
+                _totalPrice += int.Parse(item.SubItems[2].Text) * float.Parse(item.SubItems[3].Text);
+            }
             totalPriceTextBox.Text = _totalPrice + " zł";
         }
 
@@ -56,8 +60,24 @@ namespace CoffeeShop
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            if (listView1.Items.Count == 0)
+                this.DialogResult = DialogResult.Cancel;
+            else
+                this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void removeProductButton_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem item = listView1.SelectedItems[0];
+                chosenProducts.Remove(int.Parse(item.SubItems[0].Text));
+                listView1.Items.Remove(item);
+                updateTotalPrice();
+            }
+            else
+                MessageBox.Show("Nie wybrano żadnego rekordu! Zaznacz rekord w liście, a następnie kliknij \"Usuń produkt\"");
         }
     }
 }

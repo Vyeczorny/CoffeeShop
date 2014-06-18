@@ -37,6 +37,7 @@
             this.totalPriceTextBox = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.removeProductButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             this.tableLayoutPanel1.Controls.Add(this.totalPriceTextBox, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.okButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.removeProductButton, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -131,6 +133,17 @@
             this.label1.Text = "Suma:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // removeProductButton
+            // 
+            this.removeProductButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.removeProductButton.Location = new System.Drawing.Point(131, 398);
+            this.removeProductButton.Name = "removeProductButton";
+            this.removeProductButton.Size = new System.Drawing.Size(122, 23);
+            this.removeProductButton.TabIndex = 5;
+            this.removeProductButton.Text = "Usuń produkt";
+            this.removeProductButton.UseVisualStyleBackColor = true;
+            this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
+            // 
             // CartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,5 +170,6 @@
         private System.Windows.Forms.TextBox totalPriceTextBox;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button removeProductButton;
     }
 }

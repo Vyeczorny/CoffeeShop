@@ -38,22 +38,25 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cartButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.showOrdersButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel1.Controls.Add(this.addToCartButton, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cartButton, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cartButton, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.showOrdersButton, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 528);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(822, 32);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -62,7 +65,7 @@
             this.addToCartButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addToCartButton.Location = new System.Drawing.Point(3, 3);
             this.addToCartButton.Name = "addToCartButton";
-            this.addToCartButton.Size = new System.Drawing.Size(299, 26);
+            this.addToCartButton.Size = new System.Drawing.Size(191, 26);
             this.addToCartButton.TabIndex = 0;
             this.addToCartButton.Text = "Dodaj do koszyka";
             this.addToCartButton.UseVisualStyleBackColor = true;
@@ -114,9 +117,9 @@
             // cartButton
             // 
             this.cartButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartButton.Location = new System.Drawing.Point(613, 3);
+            this.cartButton.Location = new System.Drawing.Point(612, 3);
             this.cartButton.Name = "cartButton";
-            this.cartButton.Size = new System.Drawing.Size(206, 26);
+            this.cartButton.Size = new System.Drawing.Size(207, 26);
             this.cartButton.TabIndex = 1;
             this.cartButton.Text = "Koszyk";
             this.cartButton.UseVisualStyleBackColor = true;
@@ -132,6 +135,17 @@
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "label1";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // showOrdersButton
+            // 
+            this.showOrdersButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showOrdersButton.Location = new System.Drawing.Point(200, 3);
+            this.showOrdersButton.Name = "showOrdersButton";
+            this.showOrdersButton.Size = new System.Drawing.Size(209, 26);
+            this.showOrdersButton.TabIndex = 2;
+            this.showOrdersButton.Text = "Pokaż moje zamówienia";
+            this.showOrdersButton.UseVisualStyleBackColor = true;
+            this.showOrdersButton.Click += new System.EventHandler(this.showOrdersButton_Click);
             // 
             // UserWindow
             // 
@@ -161,5 +175,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button cartButton;
         private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Button showOrdersButton;
     }
 }

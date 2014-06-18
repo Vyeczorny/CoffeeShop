@@ -91,5 +91,11 @@ namespace CoffeeShop
 
         private Dictionary<int, int> chosenProducts;
         private int userId;
+
+        private void showOrdersButton_Click(object sender, EventArgs e)
+        {
+            ClientOrdersWindow window = new ClientOrdersWindow(userId);
+            window.ShowDialog();
+        }
     }
 }

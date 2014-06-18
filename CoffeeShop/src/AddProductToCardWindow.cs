@@ -37,7 +37,9 @@ namespace CoffeeShop
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            if (Counter > noOfProducts)
+            if (counterUpDown.Value == 0)
+                MessageBox.Show("Wartość 'Ilość' musi być większa od 0");
+            else if (Counter > noOfProducts)
             {
                 if (MessageBox.Show("Uwaga: nasz sklep posiada w tej chwili jedynie " + noOfProducts + " sztuk(i) wybranego produktu, dlatego zamówienie może być wykonane z opóźnieniem", "Uwaga", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
