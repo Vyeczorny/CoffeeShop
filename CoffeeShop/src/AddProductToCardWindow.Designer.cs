@@ -101,7 +101,6 @@
             // okButton
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.okButton, 2);
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.okButton.Location = new System.Drawing.Point(3, 80);
             this.okButton.Name = "okButton";
@@ -115,6 +114,11 @@
             // 
             this.counterUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.counterUpDown.Location = new System.Drawing.Point(145, 28);
+            this.counterUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.counterUpDown.Name = "counterUpDown";
             this.counterUpDown.Size = new System.Drawing.Size(136, 20);
             this.counterUpDown.TabIndex = 4;

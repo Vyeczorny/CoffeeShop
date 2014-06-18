@@ -37,6 +37,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cartButton = new System.Windows.Forms.Button();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,10 +79,10 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Location = new System.Drawing.Point(0, 39);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(822, 528);
+            this.listView1.Size = new System.Drawing.Size(822, 489);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -119,6 +120,18 @@
             this.cartButton.TabIndex = 1;
             this.cartButton.Text = "Koszyk";
             this.cartButton.UseVisualStyleBackColor = true;
+            this.cartButton.Click += new System.EventHandler(this.cartButton_Click);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.titleLabel.Location = new System.Drawing.Point(0, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(822, 39);
+            this.titleLabel.TabIndex = 2;
+            this.titleLabel.Text = "label1";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UserWindow
             // 
@@ -126,6 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 560);
             this.Controls.Add(this.listView1);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UserWindow";
             this.Text = "UserWindow";
@@ -146,5 +160,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button cartButton;
+        private System.Windows.Forms.Label titleLabel;
     }
 }

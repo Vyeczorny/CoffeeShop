@@ -14,9 +14,9 @@ namespace CoffeeShop
     {
         public AddProductToCardWindow(string name, float price, int max)
         {
+            noOfProducts = max;
             InitializeComponent();
             productNameLabel.Text = name;
-            counterUpDown.Maximum = max;
             singlePrice = price;
             priceTextBox.Text = "0 zł";
         }
@@ -29,7 +29,6 @@ namespace CoffeeShop
             }
         }
 
-        private float singlePrice;
 
         private void counterUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -38,7 +37,22 @@ namespace CoffeeShop
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Counter > noOfProducts)
+            {
+                if (MessageBox.Show("Uwaga: nasz sklep posiada w tej chwili jedynie " + noOfProducts + " sztuk(i) wybranego produktu, dlatego zamówienie może być wykonane z opóźnieniem", "Uwaga", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
+
+        private int noOfProducts;
+        private float singlePrice;
     }
 }

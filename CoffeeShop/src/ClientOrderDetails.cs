@@ -61,6 +61,8 @@ namespace CoffeeShop
                 i.SubItems.Add(reader[2].ToString());
                 i.SubItems.Add(((int)reader[2] * (double)reader[3]).ToString());
             }
+
+            addButton.Hide();
         }
 
         protected override void okButton_Click(object sender, EventArgs e)
@@ -71,7 +73,7 @@ namespace CoffeeShop
             else if (newStatus == "Wysłane")
                 newStatus = "Wyslane";
 
-            if(newStatus == "Skompletowane")
+            if(newStatus == "Skompletowane" || newStatus == "Wyslane")
             {
                 if (haveEnoughProducts())
                 {

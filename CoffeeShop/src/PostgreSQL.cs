@@ -37,6 +37,10 @@ namespace CoffeeShop
             connection.Close();
         }
 
+        public static NpgsqlTransaction beginTransaction()
+        {
+            return connection.BeginTransaction();
+        }
 
         private static NpgsqlConnection connection;
     }

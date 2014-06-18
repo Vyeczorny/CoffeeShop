@@ -64,13 +64,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 134);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 237);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // countBox
             // 
             this.countBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countBox.Location = new System.Drawing.Point(88, 81);
+            this.countBox.Location = new System.Drawing.Point(88, 183);
             this.countBox.Name = "countBox";
             this.countBox.Size = new System.Drawing.Size(193, 20);
             this.countBox.TabIndex = 7;
@@ -78,7 +78,7 @@
             // priceBox
             // 
             this.priceBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.priceBox.Location = new System.Drawing.Point(88, 55);
+            this.priceBox.Location = new System.Drawing.Point(88, 157);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(193, 20);
             this.priceBox.TabIndex = 6;
@@ -89,7 +89,7 @@
             this.describeBox.Location = new System.Drawing.Point(88, 29);
             this.describeBox.Multiline = true;
             this.describeBox.Name = "describeBox";
-            this.describeBox.Size = new System.Drawing.Size(193, 20);
+            this.describeBox.Size = new System.Drawing.Size(193, 122);
             this.describeBox.TabIndex = 5;
             // 
             // label1
@@ -113,7 +113,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 26);
+            this.label2.Size = new System.Drawing.Size(79, 128);
             this.label2.TabIndex = 1;
             this.label2.Text = "Opis";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,7 +124,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 52);
+            this.label3.Location = new System.Drawing.Point(3, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 26);
             this.label3.TabIndex = 2;
@@ -137,7 +137,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 78);
+            this.label4.Location = new System.Drawing.Point(3, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 26);
             this.label4.TabIndex = 3;
@@ -156,9 +156,9 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.updateProductButton, 2);
             this.updateProductButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateProductButton.Location = new System.Drawing.Point(3, 107);
+            this.updateProductButton.Location = new System.Drawing.Point(3, 209);
             this.updateProductButton.Name = "updateProductButton";
-            this.updateProductButton.Size = new System.Drawing.Size(278, 24);
+            this.updateProductButton.Size = new System.Drawing.Size(278, 25);
             this.updateProductButton.TabIndex = 8;
             this.updateProductButton.Text = "OK";
             this.updateProductButton.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 134);
+            this.ClientSize = new System.Drawing.Size(284, 237);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ProductForm";
             this.Text = "UpdateProductWindow";

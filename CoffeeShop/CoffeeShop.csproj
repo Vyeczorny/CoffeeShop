@@ -50,10 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddProductToCardWindow.cs">
+    <Compile Include="src\CartWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddProductToCardWindow.Designer.cs">
+    <Compile Include="src\CartWindow.Designer.cs">
+      <DependentUpon>CartWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\AddProductToCardWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AddProductToCardWindow.Designer.cs">
       <DependentUpon>AddProductToCardWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="src\ClientOrderDetails.cs">
@@ -149,8 +155,11 @@
     <Compile Include="src\UserWindow.Designer.cs">
       <DependentUpon>UserWindow.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddProductToCardWindow.resx">
+    <EmbeddedResource Include="src\AddProductToCardWindow.resx">
       <DependentUpon>AddProductToCardWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\CartWindow.resx">
+      <DependentUpon>CartWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ClientOrder.resx">
       <DependentUpon>ClientOrder.cs</DependentUpon>

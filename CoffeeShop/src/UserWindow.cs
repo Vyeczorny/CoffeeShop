@@ -13,10 +13,15 @@ namespace CoffeeShop
 {
     public partial class UserWindow : Form
     {
-        public UserWindow()
+        public UserWindow(int id)
         {
             InitializeComponent();
+            userId = id;
             chosenProducts = new Dictionary<int, int>();
+            NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT * FROM uzytkownik WHERE kod_uz=" + userId);
+            reader.Read();
+            titleLabel.Text = reader[1] + " " + reader[2] + "    ";
+            reader.Close();
         }
 
         private void UserWindow_Load(object sender, EventArgs e)
@@ -26,7 +31,7 @@ namespace CoffeeShop
 
         private void updateListView()
         {
-            NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECt * FROM produkt");
+            NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT * FROM produkt");
             while(reader.Read())
             {
                 ListViewItem item = listView1.Items.Add(new ListViewItem(reader[0].ToString()));
@@ -60,6 +65,31 @@ namespace CoffeeShop
                 MessageBox.Show("Nie wybrane żadnego produktu!");
         }
 
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            CartWindow window = new CartWindow(chosenProducts);
+            if(window.ShowDialog() == DialogResult.OK)
+            {
+                int orderId = (int)PostgreSQL.executeScalar("INSERT INTO zamowienie_detaliczne(kod_uz, koszt, status) values (" 
+                    + userId + "," 
+                    + window.totalPrice + "," 
+                    + "'Nowe') RETURNING nr_zamowienia");
+                
+                foreach(var product in chosenProducts)
+                {
+                    PostgreSQL.executeCommand("INSERT INTO zamowienie_detaliczne_zawiera_produkt values("
+                        + product.Key + ","
+                        + orderId + ","
+                        + product.Value + ")"
+                        );
+                }
+
+                chosenProducts.Clear();
+                cartButton.Text = "Koszyk";
+            }
+        }
+
         private Dictionary<int, int> chosenProducts;
+        private int userId;
     }
 }
