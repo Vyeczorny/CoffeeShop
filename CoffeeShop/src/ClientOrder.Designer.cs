@@ -1,6 +1,6 @@
 ﻿namespace CoffeeShop
 {
-    partial class DeliveryOrder
+    partial class ClientOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.supplierComboBox = new System.Windows.Forms.ComboBox();
+            this.clientComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.okButton, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.supplierComboBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.clientComboBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.priceTextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.statusComboBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.addButton, 1, 5);
@@ -71,17 +71,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(432, 314);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(451, 350);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Dostawca";
+            this.label1.Text = "Klient";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -115,7 +115,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(3, 96);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(426, 186);
+            this.listView1.Size = new System.Drawing.Size(445, 222);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -142,9 +142,9 @@
             // okButton
             // 
             this.okButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.okButton.Location = new System.Drawing.Point(3, 288);
+            this.okButton.Location = new System.Drawing.Point(3, 324);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(210, 23);
+            this.okButton.Size = new System.Drawing.Size(219, 23);
             this.okButton.TabIndex = 4;
             this.okButton.Text = "Zatwierdź";
             this.okButton.UseVisualStyleBackColor = true;
@@ -164,9 +164,9 @@
             // 
             this.priceTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.priceTextBox.Enabled = false;
-            this.priceTextBox.Location = new System.Drawing.Point(219, 30);
+            this.priceTextBox.Location = new System.Drawing.Point(228, 30);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(210, 20);
+            this.priceTextBox.Size = new System.Drawing.Size(220, 20);
             this.priceTextBox.TabIndex = 7;
             // 
             // statusComboBox
@@ -174,41 +174,41 @@
             this.statusComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statusComboBox.FormattingEnabled = true;
-            this.statusComboBox.Location = new System.Drawing.Point(219, 56);
+            this.statusComboBox.Location = new System.Drawing.Point(228, 56);
             this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.Size = new System.Drawing.Size(210, 21);
+            this.statusComboBox.Size = new System.Drawing.Size(220, 21);
             this.statusComboBox.TabIndex = 8;
+            this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.statusComboBox_SelectedIndexChanged);
             // 
             // addButton
             // 
             this.addButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addButton.Location = new System.Drawing.Point(219, 288);
+            this.addButton.Location = new System.Drawing.Point(228, 324);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(210, 23);
+            this.addButton.Size = new System.Drawing.Size(220, 23);
             this.addButton.TabIndex = 9;
             this.addButton.Text = "Dodaj produkty";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // supplierComboBox
+            // clientComboBox
             // 
-            this.supplierComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.supplierComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.supplierComboBox.FormattingEnabled = true;
-            this.supplierComboBox.Location = new System.Drawing.Point(219, 3);
-            this.supplierComboBox.Name = "supplierComboBox";
-            this.supplierComboBox.Size = new System.Drawing.Size(210, 21);
-            this.supplierComboBox.TabIndex = 6;
-            this.supplierComboBox.SelectedIndexChanged += new System.EventHandler(this.supplierComboBox_SelectedIndexChanged);
+            this.clientComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.clientComboBox.FormattingEnabled = true;
+            this.clientComboBox.Location = new System.Drawing.Point(228, 3);
+            this.clientComboBox.Name = "clientComboBox";
+            this.clientComboBox.Size = new System.Drawing.Size(220, 21);
+            this.clientComboBox.TabIndex = 6;
             // 
-            // DeliveryOrder
+            // ClientOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 314);
+            this.ClientSize = new System.Drawing.Size(451, 350);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "DeliveryOrder";
-            this.Text = "AddSupplierOrder2";
+            this.Name = "ClientOrderDetails";
+            this.Text = "ClientOrderDetails";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -221,16 +221,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        protected System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        protected System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Label label4;
         protected System.Windows.Forms.TextBox priceTextBox;
         protected System.Windows.Forms.ComboBox statusComboBox;
-        protected System.Windows.Forms.ListView listView1;
-        protected System.Windows.Forms.Button okButton;
         protected System.Windows.Forms.Button addButton;
-        protected System.Windows.Forms.ComboBox supplierComboBox;
+        protected System.Windows.Forms.ComboBox clientComboBox;
     }
 }

@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\ClientOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ClientOrderDetails.Designer.cs">
+      <DependentUpon>ClientOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\ClientOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ClientOrder.Designer.cs">
+      <DependentUpon>ClientOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\DeliveryOrder_Details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,9 @@
     <Compile Include="src\SupplierProductForm.Designer.cs">
       <DependentUpon>SupplierProductForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="src\ClientOrder.resx">
+      <DependentUpon>ClientOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\DeliveryOrder.resx">
       <DependentUpon>DeliveryOrder.cs</DependentUpon>
     </EmbeddedResource>

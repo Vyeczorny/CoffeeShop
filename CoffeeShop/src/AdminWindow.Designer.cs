@@ -351,6 +351,7 @@
             this.listView3.TabIndex = 1;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.DoubleClick += new System.EventHandler(this.listView3_DoubleClick);
             // 
             // columnHeader4
             // 
@@ -456,6 +457,7 @@
             this.listView4.TabIndex = 0;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
+            this.listView4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView4_MouseDoubleClick);
             // 
             // columnHeader9
             // 

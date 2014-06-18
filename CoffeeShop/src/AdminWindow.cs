@@ -23,6 +23,7 @@ namespace CoffeeShop
             updateListView1();
             updateListView2();
             updateListView3();
+            updateListView4();
         }
 
         private void updateListView1()
@@ -61,6 +62,20 @@ namespace CoffeeShop
             while(reader.Read())
             {
                 ListViewItem item = listView3.Items.Add(reader[0].ToString());
+                for (int i = 1; i < reader.FieldCount; ++i)
+                    item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
+            }
+        }
+
+        private void updateListView4()
+        {
+            listView4.Items.Clear();
+
+            NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT * FROM zamowienie_detaliczne");
+
+            while (reader.Read())
+            {
+                ListViewItem item = listView4.Items.Add(reader[0].ToString());
                 for (int i = 1; i < reader.FieldCount; ++i)
                     item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
             }
@@ -175,6 +190,22 @@ namespace CoffeeShop
                 else
                     MessageBox.Show("Nie można usunąć zamówienia, które zostało opłacone lub dostarczone");
             }
+        }
+
+        private void listView3_DoubleClick(object sender, EventArgs e)
+        {
+            DeliveryOrder_Details window = new DeliveryOrder_Details(listView3.SelectedItems[0]);
+            window.ShowDialog();
+            updateListView3();
+            updateListView1();
+        }
+
+        private void listView4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ClientOrderDetails window = new ClientOrderDetails(listView4.SelectedItems[0]);
+            window.ShowDialog();
+            updateListView4();
+            updateListView1();
         }
     }
 }
