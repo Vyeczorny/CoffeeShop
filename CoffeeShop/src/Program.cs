@@ -28,8 +28,8 @@ namespace CoffeeShop
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminWindow());
-            //Application.Run(new DeliveryOrder_AddProductWindow(1, null));
+            //Application.Run(new AdminWindow());
+            Application.Run(new UserWindow());
 
             PostgreSQL.close();
         }
