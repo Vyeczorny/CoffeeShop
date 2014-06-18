@@ -50,6 +50,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\DeliveryOrder_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DeliveryOrder_Details.Designer.cs">
+      <DependentUpon>DeliveryOrder_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DeliveryOrder_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DeliveryOrder_Add.Designer.cs">
+      <DependentUpon>DeliveryOrder_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DeliveryOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DeliveryOrder.Designer.cs">
+      <DependentUpon>DeliveryOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DeliveryOrder_AddProductWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DeliveryOrder_AddProductWindow.Designer.cs">
+      <DependentUpon>DeliveryOrder_AddProductWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\AddSupplierWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +125,12 @@
     <Compile Include="src\SupplierProductForm.Designer.cs">
       <DependentUpon>SupplierProductForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="src\DeliveryOrder.resx">
+      <DependentUpon>DeliveryOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DeliveryOrder_AddProductWindow.resx">
+      <DependentUpon>DeliveryOrder_AddProductWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\AddSupplierWindow.resx">
       <DependentUpon>AddSupplierWindow.cs</DependentUpon>
     </EmbeddedResource>

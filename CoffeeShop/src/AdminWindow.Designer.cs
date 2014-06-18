@@ -41,7 +41,7 @@
             this.orderProductButton = new System.Windows.Forms.Button();
             this.addProductButton = new System.Windows.Forms.Button();
             this.updateProductButton = new System.Windows.Forms.Button();
-            this.SuppliesPage = new System.Windows.Forms.TabPage();
+            this.suppliesPage = new System.Windows.Forms.TabPage();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,17 +51,40 @@
             this.updateSupplierButton = new System.Windows.Forms.Button();
             this.removeSupplierButton = new System.Windows.Forms.Button();
             this.addSupplierButton = new System.Windows.Forms.Button();
+            this.orders1Page = new System.Windows.Forms.TabPage();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.addOrderButton = new System.Windows.Forms.Button();
+            this.removeOrderButton = new System.Windows.Forms.Button();
+            this.orderDetailsButton = new System.Windows.Forms.Button();
+            this.orders2TabPage = new System.Windows.Forms.TabPage();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.productsPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.SuppliesPage.SuspendLayout();
+            this.suppliesPage.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.orders1Page.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.orders2TabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.productsPage);
-            this.tabControl.Controls.Add(this.SuppliesPage);
+            this.tabControl.Controls.Add(this.suppliesPage);
+            this.tabControl.Controls.Add(this.orders1Page);
+            this.tabControl.Controls.Add(this.orders2TabPage);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
@@ -116,7 +139,7 @@
             // Opis
             // 
             this.Opis.Text = "Opis";
-            this.Opis.Width = 433;
+            this.Opis.Width = 399;
             // 
             // Nazwa
             // 
@@ -192,17 +215,17 @@
             this.updateProductButton.UseVisualStyleBackColor = true;
             this.updateProductButton.Click += new System.EventHandler(this.updateProductButton_Click);
             // 
-            // SuppliesPage
+            // suppliesPage
             // 
-            this.SuppliesPage.Controls.Add(this.listView2);
-            this.SuppliesPage.Controls.Add(this.tableLayoutPanel2);
-            this.SuppliesPage.Location = new System.Drawing.Point(4, 22);
-            this.SuppliesPage.Name = "SuppliesPage";
-            this.SuppliesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SuppliesPage.Size = new System.Drawing.Size(822, 529);
-            this.SuppliesPage.TabIndex = 2;
-            this.SuppliesPage.Text = "Dostawcy";
-            this.SuppliesPage.UseVisualStyleBackColor = true;
+            this.suppliesPage.Controls.Add(this.listView2);
+            this.suppliesPage.Controls.Add(this.tableLayoutPanel2);
+            this.suppliesPage.Location = new System.Drawing.Point(4, 22);
+            this.suppliesPage.Name = "suppliesPage";
+            this.suppliesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.suppliesPage.Size = new System.Drawing.Size(822, 529);
+            this.suppliesPage.TabIndex = 2;
+            this.suppliesPage.Text = "Dostawcy";
+            this.suppliesPage.UseVisualStyleBackColor = true;
             // 
             // listView2
             // 
@@ -298,6 +321,166 @@
             this.addSupplierButton.UseVisualStyleBackColor = true;
             this.addSupplierButton.Click += new System.EventHandler(this.addSupplierButton_Click);
             // 
+            // orders1Page
+            // 
+            this.orders1Page.Controls.Add(this.listView3);
+            this.orders1Page.Controls.Add(this.tableLayoutPanel3);
+            this.orders1Page.Location = new System.Drawing.Point(4, 22);
+            this.orders1Page.Name = "orders1Page";
+            this.orders1Page.Padding = new System.Windows.Forms.Padding(3);
+            this.orders1Page.Size = new System.Drawing.Size(822, 529);
+            this.orders1Page.TabIndex = 3;
+            this.orders1Page.Text = "Zamówienia dostawy";
+            this.orders1Page.UseVisualStyleBackColor = true;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView3.FullRowSelect = true;
+            this.listView3.GridLines = true;
+            this.listView3.Location = new System.Drawing.Point(3, 3);
+            this.listView3.MultiSelect = false;
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(816, 490);
+            this.listView3.TabIndex = 1;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nr zamówienia";
+            this.columnHeader4.Width = 87;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "ID dostawcy";
+            this.columnHeader5.Width = 89;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Koszt";
+            this.columnHeader6.Width = 90;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Status";
+            this.columnHeader7.Width = 99;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Data";
+            this.columnHeader8.Width = 103;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.addOrderButton, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.removeOrderButton, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.orderDetailsButton, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 493);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(816, 33);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // addOrderButton
+            // 
+            this.addOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addOrderButton.Location = new System.Drawing.Point(3, 3);
+            this.addOrderButton.Name = "addOrderButton";
+            this.addOrderButton.Size = new System.Drawing.Size(266, 27);
+            this.addOrderButton.TabIndex = 0;
+            this.addOrderButton.Text = "Dodaj zamówienie";
+            this.addOrderButton.UseVisualStyleBackColor = true;
+            this.addOrderButton.Click += new System.EventHandler(this.addOrderButton_Click);
+            // 
+            // removeOrderButton
+            // 
+            this.removeOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.removeOrderButton.Location = new System.Drawing.Point(275, 3);
+            this.removeOrderButton.Name = "removeOrderButton";
+            this.removeOrderButton.Size = new System.Drawing.Size(266, 27);
+            this.removeOrderButton.TabIndex = 1;
+            this.removeOrderButton.Text = "Usuń zamówienie";
+            this.removeOrderButton.UseVisualStyleBackColor = true;
+            this.removeOrderButton.Click += new System.EventHandler(this.removeOrderButton_Click);
+            // 
+            // orderDetailsButton
+            // 
+            this.orderDetailsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderDetailsButton.Location = new System.Drawing.Point(547, 3);
+            this.orderDetailsButton.Name = "orderDetailsButton";
+            this.orderDetailsButton.Size = new System.Drawing.Size(266, 27);
+            this.orderDetailsButton.TabIndex = 2;
+            this.orderDetailsButton.Text = "Szczegóły zamówienia";
+            this.orderDetailsButton.UseVisualStyleBackColor = true;
+            this.orderDetailsButton.Click += new System.EventHandler(this.orderDetailsButton_Click);
+            // 
+            // orders2TabPage
+            // 
+            this.orders2TabPage.Controls.Add(this.listView4);
+            this.orders2TabPage.Location = new System.Drawing.Point(4, 22);
+            this.orders2TabPage.Name = "orders2TabPage";
+            this.orders2TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.orders2TabPage.Size = new System.Drawing.Size(822, 529);
+            this.orders2TabPage.TabIndex = 4;
+            this.orders2TabPage.Text = "Zamówienia klientów";
+            this.orders2TabPage.UseVisualStyleBackColor = true;
+            // 
+            // listView4
+            // 
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13});
+            this.listView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView4.FullRowSelect = true;
+            this.listView4.GridLines = true;
+            this.listView4.Location = new System.Drawing.Point(3, 3);
+            this.listView4.MultiSelect = false;
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(816, 523);
+            this.listView4.TabIndex = 0;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "ID";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Kod zamawiającego";
+            this.columnHeader10.Width = 125;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Koszt";
+            this.columnHeader11.Width = 111;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Status";
+            this.columnHeader12.Width = 99;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Data zamówienia";
+            this.columnHeader13.Width = 115;
+            // 
             // AdminWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,8 +493,11 @@
             this.tabControl.ResumeLayout(false);
             this.productsPage.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.SuppliesPage.ResumeLayout(false);
+            this.suppliesPage.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.orders1Page.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.orders2TabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -331,7 +517,7 @@
         private System.Windows.Forms.Button orderProductButton;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button updateProductButton;
-        private System.Windows.Forms.TabPage SuppliesPage;
+        private System.Windows.Forms.TabPage suppliesPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button updateSupplierButton;
@@ -341,5 +527,23 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.TabPage orders1Page;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button addOrderButton;
+        private System.Windows.Forms.Button removeOrderButton;
+        private System.Windows.Forms.Button orderDetailsButton;
+        private System.Windows.Forms.TabPage orders2TabPage;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
     }
 }

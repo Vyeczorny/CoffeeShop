@@ -26,6 +26,12 @@ namespace CoffeeShop
             return command.ExecuteReader();
         }
 
+        public static object executeScalar(string str)
+        {
+            NpgsqlCommand command = new NpgsqlCommand(str, connection);
+            return command.ExecuteScalar();
+        }
+
         public static void close()
         {
             connection.Close();
