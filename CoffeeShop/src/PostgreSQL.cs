@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using NpgsqlTypes;
 
 namespace CoffeeShop
 {
@@ -37,9 +38,13 @@ namespace CoffeeShop
             connection.Close();
         }
 
-        public static NpgsqlTransaction beginTransaction()
+        public static object executeScalarWithByteArray(string str, string paramName, byte[] array)
         {
-            return connection.BeginTransaction();
+            NpgsqlCommand command = new NpgsqlCommand(str, connection);
+            NpgsqlParameter parameter = new NpgsqlParameter(paramName, NpgsqlDbType.Bytea);
+            parameter.Value = array;
+            command.Parameters.Add(parameter);
+            return command.ExecuteScalar();
         }
 
         private static NpgsqlConnection connection;

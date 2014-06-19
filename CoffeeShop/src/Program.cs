@@ -22,7 +22,6 @@ namespace CoffeeShop
 
             Thread.CurrentThread.CurrentCulture = myCulture;
             Thread.CurrentThread.CurrentUICulture = myCulture;
-            //Application.CurrentCulture.NumberFormat.NumberDecimalSeparator = ".";
             
             PostgreSQL.connect("shop", "localhost", "postgres", "qwe");
             
@@ -30,7 +29,7 @@ namespace CoffeeShop
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new AdminWindow());
             //Application.Run(new UserWindow(2));
-            Application.Run(new EmployeeWindow());
+            Application.Run(new LoginWindow());
 
             PostgreSQL.close();
         }
