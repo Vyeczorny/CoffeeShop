@@ -29,7 +29,8 @@ namespace CoffeeShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new AdminWindow());
-            Application.Run(new UserWindow(2));
+            //Application.Run(new UserWindow(2));
+            Application.Run(new EmployeeWindow());
 
             PostgreSQL.close();
         }
