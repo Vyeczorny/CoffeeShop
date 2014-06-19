@@ -58,7 +58,7 @@ namespace CoffeeShop
                         else
                         {
                             EmployeeWindow window = new EmployeeWindow();
-                            window.Show();
+                            window.ShowDialog();
                         }
                         this.Close();
                     }
