@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.passwordTextBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.addUserButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.passwordTextBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 156);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // passwordTextBox2
+            // 
+            this.passwordTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.passwordTextBox2.Location = new System.Drawing.Point(84, 107);
+            this.passwordTextBox2.Name = "passwordTextBox2";
+            this.passwordTextBox2.PasswordChar = '*';
+            this.passwordTextBox2.Size = new System.Drawing.Size(197, 20);
+            this.passwordTextBox2.TabIndex = 10;
             // 
             // label1
             // 
@@ -173,15 +182,6 @@
             this.label5.Text = "Powtórz hasło";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // passwordTextBox2
-            // 
-            this.passwordTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordTextBox2.Location = new System.Drawing.Point(84, 107);
-            this.passwordTextBox2.Name = "passwordTextBox2";
-            this.passwordTextBox2.PasswordChar = '*';
-            this.passwordTextBox2.Size = new System.Drawing.Size(197, 20);
-            this.passwordTextBox2.TabIndex = 10;
-            // 
             // AddUserWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,7 +189,7 @@
             this.ClientSize = new System.Drawing.Size(284, 156);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddUserWindow";
-            this.Text = "AddUserWindow";
+            this.Text = "Nowy użytkownik";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

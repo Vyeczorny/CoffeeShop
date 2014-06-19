@@ -241,7 +241,7 @@
             this.ClientSize = new System.Drawing.Size(505, 321);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SupplierDetails";
-            this.Text = "SupplierDetails";
+            this.Text = "Dostawca";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

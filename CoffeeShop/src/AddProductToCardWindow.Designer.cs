@@ -140,7 +140,6 @@
             this.ClientSize = new System.Drawing.Size(284, 107);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddProductToCardWindow";
-            this.Text = "AddProductToCardWindow";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.counterUpDown)).EndInit();

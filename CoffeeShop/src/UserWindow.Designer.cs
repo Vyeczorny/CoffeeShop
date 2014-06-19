@@ -30,15 +30,15 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.addToCartButton = new System.Windows.Forms.Button();
+            this.cartButton = new System.Windows.Forms.Button();
+            this.showOrdersButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cartButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.showOrdersButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel1.Controls.Add(this.addToCartButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cartButton, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.showOrdersButton, 1, 0);
@@ -71,6 +71,28 @@
             this.addToCartButton.UseVisualStyleBackColor = true;
             this.addToCartButton.Click += new System.EventHandler(this.addToCartButton_Click);
             // 
+            // cartButton
+            // 
+            this.cartButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartButton.Location = new System.Drawing.Point(612, 3);
+            this.cartButton.Name = "cartButton";
+            this.cartButton.Size = new System.Drawing.Size(207, 26);
+            this.cartButton.TabIndex = 1;
+            this.cartButton.Text = "Koszyk";
+            this.cartButton.UseVisualStyleBackColor = true;
+            this.cartButton.Click += new System.EventHandler(this.cartButton_Click);
+            // 
+            // showOrdersButton
+            // 
+            this.showOrdersButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showOrdersButton.Location = new System.Drawing.Point(200, 3);
+            this.showOrdersButton.Name = "showOrdersButton";
+            this.showOrdersButton.Size = new System.Drawing.Size(209, 26);
+            this.showOrdersButton.TabIndex = 2;
+            this.showOrdersButton.Text = "Pokaż moje zamówienia";
+            this.showOrdersButton.UseVisualStyleBackColor = true;
+            this.showOrdersButton.Click += new System.EventHandler(this.showOrdersButton_Click);
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -89,6 +111,7 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -114,17 +137,6 @@
             this.columnHeader5.Text = "Ilość";
             this.columnHeader5.Width = 84;
             // 
-            // cartButton
-            // 
-            this.cartButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartButton.Location = new System.Drawing.Point(612, 3);
-            this.cartButton.Name = "cartButton";
-            this.cartButton.Size = new System.Drawing.Size(207, 26);
-            this.cartButton.TabIndex = 1;
-            this.cartButton.Text = "Koszyk";
-            this.cartButton.UseVisualStyleBackColor = true;
-            this.cartButton.Click += new System.EventHandler(this.cartButton_Click);
-            // 
             // titleLabel
             // 
             this.titleLabel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -136,17 +148,6 @@
             this.titleLabel.Text = "label1";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // showOrdersButton
-            // 
-            this.showOrdersButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showOrdersButton.Location = new System.Drawing.Point(200, 3);
-            this.showOrdersButton.Name = "showOrdersButton";
-            this.showOrdersButton.Size = new System.Drawing.Size(209, 26);
-            this.showOrdersButton.TabIndex = 2;
-            this.showOrdersButton.Text = "Pokaż moje zamówienia";
-            this.showOrdersButton.UseVisualStyleBackColor = true;
-            this.showOrdersButton.Click += new System.EventHandler(this.showOrdersButton_Click);
-            // 
             // UserWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,7 +157,7 @@
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UserWindow";
-            this.Text = "UserWindow";
+            this.Text = "CoffeeShop";
             this.Load += new System.EventHandler(this.UserWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

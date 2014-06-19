@@ -39,10 +39,10 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.okButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.supplierComboBox = new System.Windows.Forms.ComboBox();
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.supplierComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +160,17 @@
             this.label4.Text = "Status";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // supplierComboBox
+            // 
+            this.supplierComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.supplierComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.supplierComboBox.FormattingEnabled = true;
+            this.supplierComboBox.Location = new System.Drawing.Point(219, 3);
+            this.supplierComboBox.Name = "supplierComboBox";
+            this.supplierComboBox.Size = new System.Drawing.Size(210, 21);
+            this.supplierComboBox.TabIndex = 6;
+            this.supplierComboBox.SelectedIndexChanged += new System.EventHandler(this.supplierComboBox_SelectedIndexChanged);
+            // 
             // priceTextBox
             // 
             this.priceTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -190,17 +201,6 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // supplierComboBox
-            // 
-            this.supplierComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.supplierComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.supplierComboBox.FormattingEnabled = true;
-            this.supplierComboBox.Location = new System.Drawing.Point(219, 3);
-            this.supplierComboBox.Name = "supplierComboBox";
-            this.supplierComboBox.Size = new System.Drawing.Size(210, 21);
-            this.supplierComboBox.TabIndex = 6;
-            this.supplierComboBox.SelectedIndexChanged += new System.EventHandler(this.supplierComboBox_SelectedIndexChanged);
-            // 
             // DeliveryOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,7 +208,7 @@
             this.ClientSize = new System.Drawing.Size(432, 314);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DeliveryOrder";
-            this.Text = "AddSupplierOrder2";
+            this.Text = "Zamówienie dostawy";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

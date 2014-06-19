@@ -97,5 +97,11 @@ namespace CoffeeShop
             ClientOrdersWindow window = new ClientOrdersWindow(userId);
             window.ShowDialog();
         }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            ProductFormConst window = new ProductFormConst(listView1.SelectedItems[0]);
+            window.ShowDialog();
+        }
     }
 }

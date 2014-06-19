@@ -151,7 +151,7 @@
             this.ClientSize = new System.Drawing.Size(643, 424);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CartWindow";
-            this.Text = "CartWindow";
+            this.Text = "Koszyk";
             this.Load += new System.EventHandler(this.CartWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

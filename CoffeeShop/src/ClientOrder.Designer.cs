@@ -39,10 +39,10 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.okButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.clientComboBox = new System.Windows.Forms.ComboBox();
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.clientComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +160,16 @@
             this.label4.Text = "Status";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // clientComboBox
+            // 
+            this.clientComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.clientComboBox.FormattingEnabled = true;
+            this.clientComboBox.Location = new System.Drawing.Point(228, 3);
+            this.clientComboBox.Name = "clientComboBox";
+            this.clientComboBox.Size = new System.Drawing.Size(220, 21);
+            this.clientComboBox.TabIndex = 6;
+            // 
             // priceTextBox
             // 
             this.priceTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -191,24 +201,14 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // clientComboBox
-            // 
-            this.clientComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clientComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.clientComboBox.FormattingEnabled = true;
-            this.clientComboBox.Location = new System.Drawing.Point(228, 3);
-            this.clientComboBox.Name = "clientComboBox";
-            this.clientComboBox.Size = new System.Drawing.Size(220, 21);
-            this.clientComboBox.TabIndex = 6;
-            // 
             // ClientOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 350);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "ClientOrderDetails";
-            this.Text = "ClientOrderDetails";
+            this.Name = "ClientOrder";
+            this.Text = "Zamówienie detaliczne";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

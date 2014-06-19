@@ -141,7 +141,6 @@
             this.ClientSize = new System.Drawing.Size(284, 105);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SupplierProductForm";
-            this.Text = "SupplierProductForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

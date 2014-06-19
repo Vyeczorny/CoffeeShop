@@ -40,25 +40,24 @@ namespace CoffeeShop
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string product = productComboBox.Items[productComboBox.SelectedIndex].ToString();
-            product = product.Substring(0, product.IndexOf('.'));
+            try
+            {
+                string product = productComboBox.Items[productComboBox.SelectedIndex].ToString();
+                product = product.Substring(0, product.IndexOf('.'));
 
-            PostgreSQL.executeCommand("INSERT INTO dostawca_dostarcza_produkt values(" 
-                + supplierId + ","
-                + product + ","
-                + float.Parse(priceTextBox.Text) + ","
-                + int.Parse(countTextBox.Text) + ")"
-                );
+                PostgreSQL.executeCommand("INSERT INTO dostawca_dostarcza_produkt values("
+                    + supplierId + ","
+                    + product + ","
+                    + float.Parse(priceTextBox.Text) + ","
+                    + int.Parse(countTextBox.Text) + ")"
+                    );
 
-            //item.SubItems[0].Text = product;
-            //NpgsqlDataReader reader = PostgreSQL.executeCommand("SELECT nazwa FROM produkt WHERE kod_prod=" + item.SubItems[0].Text);
-            //bool isAnswer = reader.Read();
-            //item.SubItems.Add(reader[0].ToString());
-            //reader.Close();
-            //item.SubItems.Add(countTextBox.Text);
-            //item.SubItems.Add(priceTextBox.Text);
-
-            this.Close();
+                this.Close();
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private string supplierId;

@@ -38,7 +38,6 @@
             this.Ilość = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.removeProductButton = new System.Windows.Forms.Button();
-            this.orderProductButton = new System.Windows.Forms.Button();
             this.addProductButton = new System.Windows.Forms.Button();
             this.updateProductButton = new System.Windows.Forms.Button();
             this.suppliesPage = new System.Windows.Forms.TabPage();
@@ -47,7 +46,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
             this.updateSupplierButton = new System.Windows.Forms.Button();
             this.removeSupplierButton = new System.Windows.Forms.Button();
             this.addSupplierButton = new System.Windows.Forms.Button();
@@ -161,7 +159,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.removeProductButton, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.orderProductButton, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.addProductButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.updateProductButton, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -182,16 +179,6 @@
             this.removeProductButton.Text = "Usuń produkt";
             this.removeProductButton.UseVisualStyleBackColor = true;
             this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
-            // 
-            // orderProductButton
-            // 
-            this.orderProductButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderProductButton.Location = new System.Drawing.Point(411, 3);
-            this.orderProductButton.Name = "orderProductButton";
-            this.orderProductButton.Size = new System.Drawing.Size(198, 23);
-            this.orderProductButton.TabIndex = 2;
-            this.orderProductButton.Text = "Zamów produkt";
-            this.orderProductButton.UseVisualStyleBackColor = true;
             // 
             // addProductButton
             // 
@@ -267,7 +254,6 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.updateSupplierButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.removeSupplierButton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.addSupplierButton, 0, 0);
@@ -278,16 +264,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 28);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(615, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 22);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Dodaj dostawcę";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // updateSupplierButton
             // 
@@ -490,7 +466,7 @@
             this.ClientSize = new System.Drawing.Size(830, 555);
             this.Controls.Add(this.tabControl);
             this.Name = "AdminWindow";
-            this.Text = "AdminWindow";
+            this.Text = "CoffeeShop";
             this.Load += new System.EventHandler(this.AdminWindow_Load);
             this.tabControl.ResumeLayout(false);
             this.productsPage.ResumeLayout(false);
@@ -516,12 +492,10 @@
         private System.Windows.Forms.ColumnHeader Ilość;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button removeProductButton;
-        private System.Windows.Forms.Button orderProductButton;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button updateProductButton;
         private System.Windows.Forms.TabPage suppliesPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button updateSupplierButton;
         private System.Windows.Forms.Button removeSupplierButton;
         private System.Windows.Forms.Button addSupplierButton;

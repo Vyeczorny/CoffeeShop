@@ -94,7 +94,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.okButton);
             this.Name = "ClientOrdersWindow";
-            this.Text = "ClientOrdersWindow";
+            this.Text = "Twoje zamówienia";
             this.Load += new System.EventHandler(this.ClientOrdersWindow_Load);
             this.ResumeLayout(false);
 

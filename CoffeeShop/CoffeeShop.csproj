@@ -50,10 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUserWindow.cs">
+    <Compile Include="src\ProductFormConst.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUserWindow.Designer.cs">
+    <Compile Include="src\ProductFormConst.Designer.cs">
+      <DependentUpon>ProductFormConst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\AddUserWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AddUserWindow.Designer.cs">
       <DependentUpon>AddUserWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="src\EmployeeWindow.cs">
@@ -173,7 +179,7 @@
     <Compile Include="src\UserWindow.Designer.cs">
       <DependentUpon>UserWindow.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddUserWindow.resx">
+    <EmbeddedResource Include="src\AddUserWindow.resx">
       <DependentUpon>AddUserWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\EmployeeWindow.resx">

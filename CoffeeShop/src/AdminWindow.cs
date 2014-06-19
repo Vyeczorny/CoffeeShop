@@ -35,7 +35,7 @@ namespace CoffeeShop
             {
                 ListViewItem item = listView1.Items.Add(reader[0].ToString());
                 for (int i = 1; i < reader.FieldCount; ++i)
-                    item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
+                    item.SubItems.Add(reader[i].ToString());
             }
         }
 
@@ -49,7 +49,7 @@ namespace CoffeeShop
             {
                 ListViewItem item = listView2.Items.Add(reader[0].ToString());
                 for (int i = 1; i < reader.FieldCount; ++i)
-                    item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
+                    item.SubItems.Add(reader[i].ToString());
             }
         }
 
@@ -63,7 +63,7 @@ namespace CoffeeShop
             {
                 ListViewItem item = listView3.Items.Add(reader[0].ToString());
                 for (int i = 1; i < reader.FieldCount; ++i)
-                    item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
+                    item.SubItems.Add(reader[i].ToString());
             }
         }
 
@@ -77,7 +77,7 @@ namespace CoffeeShop
             {
                 ListViewItem item = listView4.Items.Add(reader[0].ToString());
                 for (int i = 1; i < reader.FieldCount; ++i)
-                    item.SubItems.Add(reader[i].ToString().Replace(',', '.'));
+                    item.SubItems.Add(reader[i].ToString());
             }
         }
 

@@ -145,8 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 110);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "AddSupplierOrder";
-            this.Text = "AddSupplierOrder";
+            this.Name = "DeliveryOrder_AddProductWindow";
             this.Load += new System.EventHandler(this.AddSupplierOrder_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

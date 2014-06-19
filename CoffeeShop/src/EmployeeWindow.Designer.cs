@@ -88,7 +88,7 @@
             this.ClientSize = new System.Drawing.Size(894, 563);
             this.Controls.Add(this.listView4);
             this.Name = "EmployeeWindow";
-            this.Text = "EmployeeWindow";
+            this.Text = "CoffeeShop";
             this.ResumeLayout(false);
 
         }
